@@ -1,0 +1,30 @@
+/**
+
+\mainpage SETestKCL
+
+\section Introduction 
+
+This <i> software </i> can be used to count the number of "yes" and "no" recorded during a conversation. 
+
+Type 'negotiation' in a command prompt
+
+\section Usage
+  
+  - type 'y' each time the negotiator says "yes"
+
+  - type 'n' each time the negotiator says "no"
+
+  - type 'z' to undo the last operation
+
+  - type 's' to show the current summary
+
+  - type 'q' to exit
+
+  - type 'h' for a help message
+
+\section Code
+
+  - The class MainWindow implements the main interface.
+
+
+*/
