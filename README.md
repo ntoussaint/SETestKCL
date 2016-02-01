@@ -19,7 +19,9 @@ There are 3 software that are required for the correct installation of this soft
  - [QT](http://www.qt.io/) with version > 5.0. Required for the creation of the user interface. 
 
 Once these packages have been downloaded and installed, you can download the source code of SETestKCL software and start cmake configuration: 
+
     git clone  https://github.com/ntoussaint/SETestKCL.git
+
     cd SETestKCL & mkdir build & ccmake ..
 
 Press 'c' for configuration. Simply configure the cmake to your convenience (be careful that the Boost_INCLUDE_DIR points to the correct directory). Press 'g' to generate makefiles.
@@ -29,12 +31,15 @@ After compilation, the binary (or bundle) should be created under the 'bin' dire
 Launch the application using the following commands:
 
 For Linux:
+
     . bin/negotiation
 
 For Mac:
+
     open -a negotiation ./bin/negotiation.app
 
 For Windows:
+
     cmd ./bin/negotiation.exe
 
 
