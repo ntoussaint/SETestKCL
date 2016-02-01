@@ -16,6 +16,7 @@ class QPushButton;
 class QTextEdit;
 class QElapsedTimer;
 
+class QCustomPlot;
 class BinomialCalculator;
 
 /**
@@ -118,6 +119,7 @@ class MainWindow: public QDialog
   QLabel* ratioLabel;
   QLabel* yRateLabel;
   QLabel* nRateLabel;
+  QCustomPlot* customPlot;
 
   /**
      Timer to calculate the elapsed time of the negotiation
