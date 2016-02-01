@@ -44,7 +44,7 @@ endif()
 ## Targets
 ## #################################################################
 
-find_package(Qt5Widgets REQUIRED)
+find_package(Qt5 REQUIRED COMPONENTS Widgets PrintSupport)
 
 add_subdirectory(statistics)
 add_subdirectory(gui)
