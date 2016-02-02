@@ -39,7 +39,7 @@ MainWindow::MainWindow()
   this->createUsageBox();
   this->createCounterBox();
   this->createSummaryBox();
-  this->buttonBox = new QDialogButtonBox(QDialogButtonBox::Save | QDialogButtonBox::Close);
+  this->buttonBox = new QDialogButtonBox(QDialogButtonBox::Close);
   connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
   connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
   QVBoxLayout *mainLayout = new QVBoxLayout;
@@ -64,7 +64,6 @@ void MainWindow::createUsageBox()
   QLabel* usageLabel = new QLabel (tr (this->Usage.c_str()));
   layout->addWidget (usageLabel);
   this->usageBox->setLayout(layout);
-  std::cout<<"constructor"<<std::endl;
 }
 
 void MainWindow::createCounterBox()
@@ -153,7 +152,8 @@ void MainWindow::keyPressEvent(QKeyEvent* e)
       case Qt::Key_Q:
 	this->UpdateCounter();
 	this->UpdateSummary();
-	//\todo emit a slot to quit the program (close window)
+	//\todo emit a signal to quit the program (close window)
+	emit done(0);
 	break;
       case Qt::Key_R:
 	this->RefreshMode = ! this->RefreshMode;
