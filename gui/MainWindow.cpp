@@ -140,7 +140,8 @@ void MainWindow::keyPressEvent(QKeyEvent* e)
 	  this->UpdateSummary();
 	break;
       case Qt::Key_Z:
-	this->ListOfOperations.pop_back();
+	if (this->ListOfOperations.size() >= 1)
+	  this->ListOfOperations.pop_back();
 	this->UpdateCounter();
 	if (this->RefreshMode == MainWindow::Refresh_Continuous)
 	  this->UpdateSummary();
