@@ -13,7 +13,10 @@ Type 'negotiation' in a command prompt
 
 <br>
 
-It is based on Qt for the gui part.
+It is based on Qt for the gui part, and Boost for the binomial distribution calculation
+
+See the full Doxygen documentation in this [link](http://ntoussaint.github.io/SETestKCL/Doxygen/).
+
 <br>
 
 
