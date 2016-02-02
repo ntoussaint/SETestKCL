@@ -5,7 +5,6 @@ project(SETestKCL
 ## #################################################################
 ## CMAKE options
 ## #################################################################
-
 option(BUILD_SHARED_LIBS OFF)
 if (BUILD_SHARED_LIBS)
   set(${PROJECT_NAME}_BUILD_TYPE SHARED)
@@ -26,7 +25,6 @@ endif()
 ## #################################################################
 ## Documentation
 ## #################################################################
-
 option(BUILD_DOC "Build documentation" OFF)
 if (BUILD_DOC)
   find_package(Doxygen)
@@ -43,22 +41,30 @@ endif()
 ## #################################################################
 ## Targets
 ## #################################################################
-
 find_package(Qt5 REQUIRED COMPONENTS Widgets PrintSupport)
-
 add_subdirectory(statistics)
 add_subdirectory(gui)
-
 include_directories(
   ${PROJECT_SOURCE_DIR}/statistics
   ${PROJECT_SOURCE_DIR}/gui
+  ${PROJECT_SOURCE_DIR}/gui/QtCustomPlot
   )
 ADD_EXECUTABLE(negotiation ${GUI_EXECUTABLE}
   Main.cpp
-)
+  )
 target_link_libraries (negotiation 
   negotiation_widgets
   )
+
+## #################################################################
+## Testing
+## #################################################################
+option(BUILD_TESTING OFF)
+if(BUILD_TESTING)
+  enable_testing()
+  include(CTest)
+  add_subdirectory(Testing)
+endif()
 
 ## #################################################################
 ## Installation
