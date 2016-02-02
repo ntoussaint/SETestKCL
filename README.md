@@ -5,7 +5,10 @@
 
 <br>
 
-It is based on Qt for the gui part.
+It is based on Qt for the gui part, and Boost for the binomial distribution calculation
+
+See the full Doxygen documentation in this [link](http://ntoussaint.github.io/SETestKCL/Doxygen/).
+
 <br>
 
 
@@ -45,15 +48,15 @@ For Windows:
 
 ### Code
 
-
-see documentation in this [link](http://ntoussaint.github.io/SETestKCL/Doxygen/)
-
 The 2 main classes are MainWindow and BinomialCalculator:
 
   - The class MainWindow implements the main interface.
 
   - The class BinomialCalculator embeds probability functionalities for a
    binomial distribution.
+
+
+See the full Doxygen documentation in this [link](http://ntoussaint.github.io/SETestKCL/Doxygen/)
 
 
 ### Run Time Usage
