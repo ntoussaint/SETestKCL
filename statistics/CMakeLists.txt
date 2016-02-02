@@ -1,4 +1,3 @@
-
 ## #################################################################
 ## Targets
 ## #################################################################
@@ -9,7 +8,6 @@ include_directories(
   ${Boost_INCLUDE_DIRS}
   )
 get_property(dirs DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY INCLUDE_DIRECTORIES)
-message(WARNING "includes : ${dirs}")
 
 add_library(binomial ${${PROJECT_NAME}_BUILD_TYPE}
   BinomialCalculator.cpp
