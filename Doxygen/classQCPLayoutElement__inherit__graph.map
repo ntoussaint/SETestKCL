@@ -1,0 +1,13 @@
+<map id="QCPLayoutElement" name="QCPLayoutElement">
+<area shape="rect" id="node4" href="$classQCPAbstractLegendItem.html" title="The abstract base class for all entries in a QCPLegend. " alt="" coords="20,229,191,256"/>
+<area shape="rect" id="node6" href="$classQCPAxisRect.html" title="Holds multiple axes and arranges them in a rectangular shape. " alt="" coords="241,229,345,256"/>
+<area shape="rect" id="node8" href="$classQCPColorScale.html" title="A color scale for use with color coding data such as QCPColorMap. " alt="" coords="370,229,486,256"/>
+<area shape="rect" id="node9" href="$classQCPLayout.html" title="The abstract base class for layouts. " alt="" coords="511,229,601,256"/>
+<area shape="rect" id="node13" href="$classQCPPlotTitle.html" title="A layout element displaying a plot title text. " alt="" coords="625,229,724,256"/>
+<area shape="rect" id="node2" href="$classQCPLayerable.html" title="Base class for all drawable objects. " alt="" coords="373,80,483,107"/>
+<area shape="rect" id="node5" href="$classQCPPlottableLegendItem.html" title="A legend item representing a plottable with an icon and the plottable name. " alt="" coords="5,304,179,331"/>
+<area shape="rect" id="node7" href="$classQCPColorScaleAxisRectPrivate.html" title="QCPColorScaleAxisRectPrivate" alt="" coords="203,304,413,331"/>
+<area shape="rect" id="node10" href="$classQCPLayoutGrid.html" title="A layout that arranges child elements in a grid. " alt="" coords="467,304,583,331"/>
+<area shape="rect" id="node12" href="$classQCPLayoutInset.html" title="A layout that places child elements aligned to the border or arbitrarily positioned. " alt="" coords="608,304,728,331"/>
+<area shape="rect" id="node11" href="$classQCPLegend.html" title="Manages a legend inside a QCustomPlot. " alt="" coords="477,379,573,405"/>
+</map>

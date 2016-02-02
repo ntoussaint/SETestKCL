@@ -1,0 +1,9 @@
+<map id="QCPAbstractPlottable" name="QCPAbstractPlottable">
+<area shape="rect" id="node4" href="$classQCPBars.html" title="A plottable representing a bar chart in a plot. " alt="" coords="5,229,84,256"/>
+<area shape="rect" id="node5" href="$classQCPColorMap.html" title="A plottable representing a two&#45;dimensional color map in a plot. " alt="" coords="109,229,218,256"/>
+<area shape="rect" id="node6" href="$classQCPCurve.html" title="A plottable representing a parametric curve in a plot. " alt="" coords="243,229,329,256"/>
+<area shape="rect" id="node7" href="$classQCPFinancial.html" title="A plottable representing a financial stock chart. " alt="" coords="354,229,458,256"/>
+<area shape="rect" id="node8" href="$classQCPGraph.html" title="A plottable representing a graph in a plot. " alt="" coords="482,229,570,256"/>
+<area shape="rect" id="node9" href="$classQCPStatisticalBox.html" title="A plottable representing a single statistical box in a plot. " alt="" coords="594,229,725,256"/>
+<area shape="rect" id="node2" href="$classQCPLayerable.html" title="Base class for all drawable objects. " alt="" coords="291,80,401,107"/>
+</map>

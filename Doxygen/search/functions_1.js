@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['background',['background',['../classQCustomPlot.html#af0376ade9431b2d85a76e02bd45d8978',1,'QCustomPlot::background()'],['../classQCPAxisRect.html#af0376ade9431b2d85a76e02bd45d8978',1,'QCPAxisRect::background()']]],
+  ['backgroundscaled',['backgroundScaled',['../classQCustomPlot.html#aec3281e43944dfa793bd1718c3290ebc',1,'QCustomPlot::backgroundScaled()'],['../classQCPAxisRect.html#aec3281e43944dfa793bd1718c3290ebc',1,'QCPAxisRect::backgroundScaled()']]],
+  ['backgroundscaledmode',['backgroundScaledMode',['../classQCustomPlot.html#a729396e400d1d635e4df24f1206562e0',1,'QCustomPlot::backgroundScaledMode()'],['../classQCPAxisRect.html#a729396e400d1d635e4df24f1206562e0',1,'QCPAxisRect::backgroundScaledMode()']]],
+  ['barabove',['barAbove',['../classQCPBars.html#aa2765941a47812ace13005b897a0e7c6',1,'QCPBars']]],
+  ['barbelow',['barBelow',['../classQCPBars.html#ad5a4cc0d63d32cb67579e0b9493946eb',1,'QCPBars']]],
+  ['bars',['bars',['../classQCPBarsGroup.html#a80b7f7a4dcd3e1a5d0743695ab72a6b7',1,'QCPBarsGroup::bars() const '],['../classQCPBarsGroup.html#a20bff14fdf814e1b80fe849242884237',1,'QCPBarsGroup::bars(int index) const ']]],
+  ['barsgroup',['barsGroup',['../classQCPBars.html#a3144d0ac4d7f31c5f7141f68188c2f66',1,'QCPBars']]],
+  ['barwidth',['barWidth',['../classQCPColorScale.html#a9cf99eee00d6fceb7c62212b9ce40fec',1,'QCPColorScale']]],
+  ['baselog',['baseLog',['../classQCPAxis.html#a941efc2a7779d8fb48b9b80072c9bedc',1,'QCPAxis']]],
+  ['basepen',['basePen',['../classQCPAxis.html#aebfe6b2252003f7f4a2c0d6bd1f5caac',1,'QCPAxis']]],
+  ['basepow',['basePow',['../classQCPAxis.html#a68ff703af7db4dcdcc94f6a46d9dff48',1,'QCPAxis']]],
+  ['basevalue',['baseValue',['../classQCPBars.html#a4ca7ee0c910fc4008717caeb1e42a3a5',1,'QCPBars']]],
+  ['beforereplot',['beforeReplot',['../classQCustomPlot.html#a4661be43e7d28b12f5a6d254d16bb48d',1,'QCustomPlot']]],
+  ['begin',['begin',['../classQCPPainter.html#aa824df969bd2de73b2d0ec283da8dfea',1,'QCPPainter']]],
+  ['binomialcalculator',['BinomialCalculator',['../classBinomialCalculator.html#a84c51e077274c990427dfff74e8e8fe6',1,'BinomialCalculator']]],
+  ['binomialcalculatortest',['BinomialCalculatorTest',['../BinomialCalculatorTest_8cxx.html#acde809fa21f57e481792c9859ccc0814',1,'BinomialCalculatorTest.cxx']]],
+  ['borderpen',['borderPen',['../classQCPLegend.html#a593ed6321819a239aa3470199d01d3d5',1,'QCPLegend']]],
+  ['bottom',['bottom',['../classQCPAxisRect.html#a02c3eeeccf5a7236f7029cdd9489075f',1,'QCPAxisRect']]],
+  ['bottomleft',['bottomLeft',['../classQCPAxisRect.html#a1ac3ea5a068ceae9d0787a95e2c1f753',1,'QCPAxisRect']]],
+  ['bottomright',['bottomRight',['../classQCPAxisRect.html#ad97bfebc7f03980ed8fbfbdcce4900b0',1,'QCPAxisRect']]],
+  ['boundingdistance',['boundingDistance',['../classQCPLineEnding.html#a90b1c6968820fed60b258f9215ee1daa',1,'QCPLineEnding']]],
+  ['brush',['brush',['../classQCPScatterStyle.html#a64a0919ed1f77df0b59dc31162bfb914',1,'QCPScatterStyle::brush()'],['../classQCPAbstractPlottable.html#a64a0919ed1f77df0b59dc31162bfb914',1,'QCPAbstractPlottable::brush()'],['../classQCPLegend.html#a64a0919ed1f77df0b59dc31162bfb914',1,'QCPLegend::brush()'],['../classQCPItemRect.html#a64a0919ed1f77df0b59dc31162bfb914',1,'QCPItemRect::brush()'],['../classQCPItemText.html#a64a0919ed1f77df0b59dc31162bfb914',1,'QCPItemText::brush()'],['../classQCPItemEllipse.html#a64a0919ed1f77df0b59dc31162bfb914',1,'QCPItemEllipse::brush()'],['../classQCPItemTracer.html#a64a0919ed1f77df0b59dc31162bfb914',1,'QCPItemTracer::brush()']]],
+  ['brushnegative',['brushNegative',['../classQCPFinancial.html#a1a6311574c9d0866fe9b88be5790b545',1,'QCPFinancial']]],
+  ['brushpositive',['brushPositive',['../classQCPFinancial.html#ab8d7ea6e5d67ec5a312e8b0322df5a33',1,'QCPFinancial']]]
+];
