@@ -93,70 +93,88 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;&lt;br&gt;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;It is based on Qt <span class="keywordflow">for</span> the gui part.</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;&lt;br&gt;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;It is based on Qt <span class="keywordflow">for</span> the gui part, and Boost <span class="keywordflow">for</span> the binomial distribution calculation. Note that the GPL [QtCustomPlot](http:<span class="comment">//www.qcustomplot.com/) has been shipped in this repository to help producing graphs.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;See the full Doxygen documentation in <span class="keyword">this</span> [link](http:<span class="comment">//ntoussaint.github.io/SETestKCL/Doxygen/).</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">## REQUIREMENTS for compilation:</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;There are 3 pieces of software that are required <span class="keywordflow">for</span> the correct installation of <span class="keyword">this</span> software:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; - [CMAKE](https:<span class="comment">//cmake.org/) with version &gt; 3.0. Required for the Cross-Platform makefile creations</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; - [BOOST](http:<span class="comment">//www.boost.org/) with version &gt; 1.60.0. Required for the rapid estimation of binomial coefficients. Note that only the includes are necessary. Simply download the source code. And, during cmake configuration, point the option Boost_INCLUDE_DIR to the main root directory of the downloaded folder.</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; - [QT](http:<span class="comment">//www.qt.io/) with version &gt; 5.0. Required for the creation of the user interface. </span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;Once these packages have been downloaded and installed, you can download the source code of SETestKCL software and start cmake configuration: </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    git clone  https:<span class="comment">//github.com/ntoussaint/SETestKCL.git</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    cd SETestKCL; mkdir build; ccmake ..</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;Press <span class="charliteral">&#39;c&#39;</span> <span class="keywordflow">for</span> configuration. Simply configure the cmake to your convenience (be careful that the Boost_INCLUDE_DIR points to the correct directory). Press <span class="charliteral">&#39;g&#39;</span> to generate makefiles.</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;After compilation, the binary (or bundle) should be created under the <span class="stringliteral">&#39;bin&#39;</span> directory of the build tree. Alternatively you can <span class="stringliteral">&#39;make install&#39;</span> the software <span class="keywordflow">for</span> more global access.</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;Launch the application <span class="keyword">using</span> the following commands:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;For Linux:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    . bin/negotiation</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;For Mac:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    open -a negotiation ./bin/negotiation.app</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;For Windows:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    cmd ./bin/negotiation.exe</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">### ScreenShot</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">### Run Time Usage</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  - type <span class="charliteral">&#39;y&#39;</span> each time the negotiator says <span class="stringliteral">&quot;yes&quot;</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  - type <span class="charliteral">&#39;n&#39;</span> each time the negotiator says <span class="stringliteral">&quot;no&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;&lt;br&gt;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">## REQUIREMENTS for compilation:</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;There are 3 pieces of software that are required <span class="keywordflow">for</span> the correct installation of <span class="keyword">this</span> software:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; - [CMAKE](https:<span class="comment">//cmake.org/) with version &gt; 3.0. Required for the Cross-Platform makefile creations</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; - [BOOST](http:<span class="comment">//www.boost.org/) with version &gt; 1.60.0. Required for the rapid estimation of binomial coefficients. Note that only the includes are necessary. Simply download the source code. And, during cmake configuration, point the option Boost_INCLUDE_DIR to the main root directory of the downloaded folder.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; - [QT](http:<span class="comment">//www.qt.io/) with version &gt; 5.0. Required for the creation of the user interface. </span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;Once these packages have been downloaded and installed, you can download the source code of SETestKCL software and start cmake configuration: </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    git clone  https:<span class="comment">//github.com/ntoussaint/SETestKCL.git</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    cd SETestKCL; mkdir build; ccmake ..</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;Press <span class="charliteral">&#39;c&#39;</span> <span class="keywordflow">for</span> configuration. Simply configure the cmake to your convenience (be careful that the Boost_INCLUDE_DIR points to the correct directory). Press <span class="charliteral">&#39;g&#39;</span> to generate makefiles.</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;After compilation, the binary (or bundle) should be created under the <span class="stringliteral">&#39;bin&#39;</span> directory of the build tree. Alternatively you can <span class="stringliteral">&#39;make install&#39;</span> the software <span class="keywordflow">for</span> more global access.</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;Launch the application <span class="keyword">using</span> the following commands:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;For Linux:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    . bin/negotiation</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;For Mac:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    open -a negotiation ./bin/negotiation.app</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;For Windows:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    cmd ./bin/negotiation.exe</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">### Code</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;The 2 <a class="code" href="Main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> classes are <a class="code" href="classMainWindow.html">MainWindow</a> and <a class="code" href="classBinomialCalculator.html">BinomialCalculator</a>:</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  - type <span class="charliteral">&#39;z&#39;</span> to undo the last operation</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  - The <span class="keyword">class </span><a class="code" href="classMainWindow.html">MainWindow</a> <span class="keyword">implements</span> the <a class="code" href="Main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> interface.</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  - type <span class="charliteral">&#39;s&#39;</span> to show (refresh) the current summary</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  - type &#39;q&#39; to exit</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  - type &#39;r&#39; to toggle the refresh mode</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  - The class <a class="code" href="classBinomialCalculator.html">BinomialCalculator</a> embeds probability functionalities for a</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   binomial distribution.</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;See the full Doxygen documentation in this [link](http:<span class="comment">//ntoussaint.github.io/SETestKCL/Doxygen/)</span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">### Gallery ###</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;&lt;a href=<span class="stringliteral">&quot;https://github.com/ntoussaint/SETestKCL/raw/master/Art/screenshot-ubuntu.png&quot;</span>&gt;&lt;img src=<span class="stringliteral">&quot;https://github.com/ntoussaint/SETestKCL/raw/master/Art/screenshot-ubuntu.png&quot;</span> alt=<span class="stringliteral">&quot;srceenshot-ubuntu&quot;</span> title=<span class="stringliteral">&quot;screenshot-ubuntu&quot;</span>&gt;&lt;/a&gt;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;&lt;br&gt;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;### Run Time Usage</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  - type &#39;y&#39; each time the negotiator says &quot;yes&quot;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  - type &#39;n&#39; each time the negotiator says &quot;no&quot;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  - type &#39;z&#39; to undo the last operation</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  - type &#39;s&#39; to show (refresh) the current summary</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  - type &#39;q&#39; to exit</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  - type &#39;r&#39; to toggle the refresh mode</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;### Gallery ###</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;&lt;a href=&quot;https:<span class="comment">//github.com/ntoussaint/SETestKCL/raw/master/Art/screenshot-ubuntu.png&quot;&gt;&lt;img src=&quot;https://github.com/ntoussaint/SETestKCL/raw/master/Art/screenshot-ubuntu.png&quot; alt=&quot;srceenshot-ubuntu&quot; title=&quot;screenshot-ubuntu&quot;&gt;&lt;/a&gt;</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;&lt;br&gt;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="ttc" id="Main_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="Main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="Main_8cpp_source.html#l00007">Main.cpp:7</a></div></div>
+<div class="ttc" id="classBinomialCalculator_html"><div class="ttname"><a href="classBinomialCalculator.html">BinomialCalculator</a></div><div class="ttdoc">This class is a simple helper that embeds probability functionalities for a binomial distribution...</div><div class="ttdef"><b>Definition:</b> <a href="BinomialCalculator_8h_source.html#l00029">BinomialCalculator.h:29</a></div></div>
+<div class="ttc" id="classMainWindow_html"><div class="ttname"><a href="classMainWindow.html">MainWindow</a></div><div class="ttdoc">This class implements the main window of the program. </div><div class="ttdef"><b>Definition:</b> <a href="MainWindow_8h_source.html#l00036">MainWindow.h:36</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 2 2016 14:30:29 for SETestKCL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 2 2016 16:09:17 for SETestKCL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

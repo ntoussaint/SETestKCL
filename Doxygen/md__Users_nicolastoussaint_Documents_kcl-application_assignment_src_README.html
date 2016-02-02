@@ -83,7 +83,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><p><b>This <em> software </em> can be used to count the number of "yes" and "no" recorded during a negotiation. </b></p>
 <p><br/>
 </p>
-<p>It is based on Qt for the gui part. <br/>
+<p>It is based on Qt for the gui part, and Boost for the binomial distribution calculation. Note that the GPL <a href="http://www.qcustomplot.com/">QtCustomPlot</a> has been shipped in this repository to help producing graphs.</p>
+<p>See the full Doxygen documentation in this <a href="http://ntoussaint.github.io/SETestKCL/Doxygen/">link</a>.</p>
+<p><br/>
 </p>
 <h2>REQUIREMENTS for compilation:</h2>
 <p>There are 3 pieces of software that are required for the correct installation of this software:</p>
@@ -105,7 +107,13 @@ cd SETestKCL; mkdir build; ccmake ..
 <pre class="fragment">open -a negotiation ./bin/negotiation.app
 </pre><p>For Windows: </p>
 <pre class="fragment">cmd ./bin/negotiation.exe
-</pre><h3>ScreenShot</h3>
+</pre><h3>Code</h3>
+<p>The 2 main classes are <a class="el" href="classMainWindow.html" title="This class implements the main window of the program. ">MainWindow</a> and <a class="el" href="classBinomialCalculator.html" title="This class is a simple helper that embeds probability functionalities for a binomial distribution...">BinomialCalculator</a>:</p>
+<ul>
+<li>The class <a class="el" href="classMainWindow.html" title="This class implements the main window of the program. ">MainWindow</a> implements the main interface.</li>
+<li>The class <a class="el" href="classBinomialCalculator.html" title="This class is a simple helper that embeds probability functionalities for a binomial distribution...">BinomialCalculator</a> embeds probability functionalities for a binomial distribution.</li>
+</ul>
+<p>See the full Doxygen documentation in this <a href="http://ntoussaint.github.io/SETestKCL/Doxygen/">link</a></p>
 <h3>Run Time Usage</h3>
 <ul>
 <li>type 'y' each time the negotiator says "yes"</li>
@@ -121,7 +129,7 @@ cd SETestKCL; mkdir build; ccmake ..
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 2 2016 14:30:29 for SETestKCL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 2 2016 16:09:17 for SETestKCL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

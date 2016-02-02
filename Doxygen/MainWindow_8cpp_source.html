@@ -131,7 +131,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  this-&gt;createUsageBox();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  this-&gt;createCounterBox();</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  this-&gt;createSummaryBox();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  this-&gt;buttonBox = <span class="keyword">new</span> QDialogButtonBox(QDialogButtonBox::Save | QDialogButtonBox::Close);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  this-&gt;buttonBox = <span class="keyword">new</span> QDialogButtonBox(QDialogButtonBox::Close);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  connect(buttonBox, SIGNAL(accepted()), <span class="keyword">this</span>, SLOT(accept()));</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  connect(buttonBox, SIGNAL(rejected()), <span class="keyword">this</span>, SLOT(reject()));</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  QVBoxLayout *mainLayout = <span class="keyword">new</span> QVBoxLayout;</div>
@@ -156,84 +156,84 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  QLabel* usageLabel = <span class="keyword">new</span> QLabel (tr (this-&gt;Usage.c_str()));</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  layout-&gt;addWidget (usageLabel);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  this-&gt;usageBox-&gt;setLayout(layout);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  std::cout&lt;&lt;<span class="stringliteral">&quot;constructor&quot;</span>&lt;&lt;std::endl;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">void</span> MainWindow::createCounterBox()</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  this-&gt;counterBox = <span class="keyword">new</span> QGroupBox(tr(<span class="stringliteral">&quot;Counter&quot;</span>));</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  QGridLayout *layout = <span class="keyword">new</span> QGridLayout;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  this-&gt;numberOfYesLabel = <span class="keyword">new</span> QLabel(tr(<span class="stringliteral">&quot;Yes: 0&quot;</span>));</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  layout-&gt;addWidget(this-&gt;numberOfYesLabel, 0, 0);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  this-&gt;numberOfNoLabel = <span class="keyword">new</span> QLabel(tr(<span class="stringliteral">&quot;No: 0&quot;</span>));</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  layout-&gt;addWidget(this-&gt;numberOfNoLabel, 0, 1);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  QFont f;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  f = this-&gt;numberOfYesLabel-&gt;font();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  f.setPointSize (24);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  f.setBold (<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  this-&gt;numberOfYesLabel-&gt;setFont (f);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  f = this-&gt;numberOfNoLabel-&gt;font();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  f.setPointSize (24);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  f.setBold (<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  this-&gt;numberOfNoLabel-&gt;setFont (f);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  this-&gt;counterBox-&gt;setLayout(layout);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">void</span> MainWindow::createSummaryBox()</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  this-&gt;summaryBox = <span class="keyword">new</span> QGroupBox(tr(<span class="stringliteral">&quot;Summary&quot;</span>));</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  QGridLayout *layout = <span class="keyword">new</span> QGridLayout;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  this-&gt;eTimeLabel = <span class="keyword">new</span> QLabel(tr(<span class="stringliteral">&quot;Elapsed Time: 0.00 min&quot;</span>));</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  layout-&gt;addWidget(this-&gt;eTimeLabel, 0, 0, Qt::AlignTop);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  this-&gt;ratioLabel = <span class="keyword">new</span> QLabel(tr(<span class="stringliteral">&quot;Ratio of &#39;yes&#39; over &#39;no&#39;: 0.00&quot;</span>));</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  layout-&gt;addWidget(this-&gt;ratioLabel, 0, 1, Qt::AlignTop);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  this-&gt;yRateLabel = <span class="keyword">new</span> QLabel(tr(<span class="stringliteral">&quot;Rate of &#39;yes&#39;: 0.00 / min&quot;</span>));</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  layout-&gt;addWidget(this-&gt;yRateLabel, 1, 0, Qt::AlignTop);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  this-&gt;nRateLabel = <span class="keyword">new</span> QLabel(tr(<span class="stringliteral">&quot;Rate of &#39;no&#39;: 0.00 / min&quot;</span>));</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  layout-&gt;addWidget(this-&gt;nRateLabel, 1, 1, Qt::AlignTop);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  this-&gt;customPlot = <span class="keyword">new</span> <a class="code" href="classQCustomPlot.html">QCustomPlot</a>();</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a8edd243d7a8afd1834fb950156013f6c">legend</a>-&gt;<a class="code" href="classQCPLayerable.html#af39f57bd76646607e618060aa185432e">setVisible</a>(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a8edd243d7a8afd1834fb950156013f6c">legend</a>-&gt;<a class="code" href="classQCPLegend.html#a2592348886ffea646c6534bf88f7c49d">setFont</a>(QFont(<span class="stringliteral">&quot;Helvetica&quot;</span>,9));</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a5266220d51fa4dd225900c44a8895e46">addGraph</a>();</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a6e4fc3683171091d3d5403b306e6a219">graph</a>(0)-&gt;<a class="code" href="classQCPAbstractPlottable.html#ab01f7d9d65c3e6a6b7889a51ad2bb487">setName</a>(<span class="stringliteral">&quot;Current Binomial Distribution&quot;</span>);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a6e4fc3683171091d3d5403b306e6a219">graph</a>(0)-&gt;<a class="code" href="classQCPAbstractPlottable.html#a499165f4744b6d22da7b24295910fb2c">setPen</a>(QPen(Qt::blue)); </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a6e4fc3683171091d3d5403b306e6a219">graph</a>(0)-&gt;<a class="code" href="classQCPAbstractPlottable.html#ac514276c3c1dcb20abd29bc56c86f781">setBrush</a>(QBrush(QColor(0, 0, 255, 20))); </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a5266220d51fa4dd225900c44a8895e46">addGraph</a>();</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a6e4fc3683171091d3d5403b306e6a219">graph</a>(1)-&gt;<a class="code" href="classQCPAbstractPlottable.html#ab01f7d9d65c3e6a6b7889a51ad2bb487">setName</a>(<span class="stringliteral">&quot;Number of Yes&quot;</span>);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a6e4fc3683171091d3d5403b306e6a219">graph</a>(1)-&gt;<a class="code" href="classQCPAbstractPlottable.html#a499165f4744b6d22da7b24295910fb2c">setPen</a>(QPen(Qt::red)); </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a058f6d3a4c86bf94c476e5c380711dba">xAxis2</a>-&gt;<a class="code" href="classQCPLayerable.html#af39f57bd76646607e618060aa185432e">setVisible</a>(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a058f6d3a4c86bf94c476e5c380711dba">xAxis2</a>-&gt;<a class="code" href="classQCPAxis.html#a022b1420c7785e75dd4de2ee3ee32d7c">setTickLabels</a>(<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a4fd6679232da7da0a1ae4e1b6ae83d6e">yAxis2</a>-&gt;<a class="code" href="classQCPLayerable.html#af39f57bd76646607e618060aa185432e">setVisible</a>(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a4fd6679232da7da0a1ae4e1b6ae83d6e">yAxis2</a>-&gt;<a class="code" href="classQCPAxis.html#a022b1420c7785e75dd4de2ee3ee32d7c">setTickLabels</a>(<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  connect(this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#adfc43a4205a16f95e685741bf78592c2">xAxis</a>, SIGNAL(rangeChanged(<a class="code" href="classQCPRange.html">QCPRange</a>)), this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a058f6d3a4c86bf94c476e5c380711dba">xAxis2</a>, SLOT(setRange(<a class="code" href="classQCPRange.html">QCPRange</a>)));</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  connect(this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#af168096ce67002b1fbce18ae5dd1b652">yAxis</a>, SIGNAL(rangeChanged(<a class="code" href="classQCPRange.html">QCPRange</a>)), this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a4fd6679232da7da0a1ae4e1b6ae83d6e">yAxis2</a>, SLOT(setRange(<a class="code" href="classQCPRange.html">QCPRange</a>)));</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#afb8d65564144ec14cb2ab1874aa12202">setInteractions</a>(<a class="code" href="namespaceQCP.html#ab5c4c67a25e8268d4dd3adda59cd4720ab79d481c81d42acc3e09ca36cf82ae22">QCP::iRangeDrag</a> | <a class="code" href="namespaceQCP.html#ab5c4c67a25e8268d4dd3adda59cd4720acd4c43af1fcd2d13e2d80cb34b8a4e31">QCP::iRangeZoom</a> | <a class="code" href="namespaceQCP.html#ab5c4c67a25e8268d4dd3adda59cd4720a098815ee744671d4f763d99255e5fa81">QCP::iSelectPlottables</a>);  </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  layout-&gt;addWidget(this-&gt;customPlot, 2, 0, 1, 2);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  layout-&gt;setRowStretch (0, 0);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  layout-&gt;setRowStretch (1, 0);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  layout-&gt;setRowStretch (2, 1);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  this-&gt;summaryBox-&gt;setLayout(layout);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="classMainWindow.html#a9e53392568d47bcb31ccbde9917efb0c">  127</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#a9e53392568d47bcb31ccbde9917efb0c">MainWindow::keyPressEvent</a>(QKeyEvent* e)</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;{</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordflow">switch</span>(e-&gt;key())</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  {</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      <span class="keywordflow">case</span> Qt::Key_Y:</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        this-&gt;ListOfOperations.push_back (<a class="code" href="classMainWindow.html#aa94abccfd42d9d292105a083a98d5f5ca5300d9661fdc5fcb6c32eccef1b4d7b4">MainWindow::Operation_Yes</a>);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        this-&gt;<a class="code" href="classMainWindow.html#ac722b8078326f2da54310d0519181c0c">UpdateCounter</a>();</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">if</span> (this-&gt;RefreshMode == <a class="code" href="classMainWindow.html#a020b21b37cd4f734180a8bf5d5a59cf2aec0a5a43ca2f2ead247e6e2ae6fbaf77">MainWindow::Refresh_Continuous</a>)</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;          this-&gt;<a class="code" href="classMainWindow.html#ade406a5faceb5564dafb9f4d1462e75f">UpdateSummary</a>();</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      <span class="keywordflow">case</span> Qt::Key_N:</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        this-&gt;ListOfOperations.push_back (<a class="code" href="classMainWindow.html#aa94abccfd42d9d292105a083a98d5f5caf77595598b8469909228270207f4d9a5">MainWindow::Operation_No</a>);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        this-&gt;<a class="code" href="classMainWindow.html#ac722b8078326f2da54310d0519181c0c">UpdateCounter</a>();</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordflow">if</span> (this-&gt;RefreshMode == <a class="code" href="classMainWindow.html#a020b21b37cd4f734180a8bf5d5a59cf2aec0a5a43ca2f2ead247e6e2ae6fbaf77">MainWindow::Refresh_Continuous</a>)</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;          this-&gt;<a class="code" href="classMainWindow.html#ade406a5faceb5564dafb9f4d1462e75f">UpdateSummary</a>();</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;      <span class="keywordflow">case</span> Qt::Key_Z:</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        this-&gt;ListOfOperations.pop_back();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keywordtype">void</span> MainWindow::createCounterBox()</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  this-&gt;counterBox = <span class="keyword">new</span> QGroupBox(tr(<span class="stringliteral">&quot;Counter&quot;</span>));</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  QGridLayout *layout = <span class="keyword">new</span> QGridLayout;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  this-&gt;numberOfYesLabel = <span class="keyword">new</span> QLabel(tr(<span class="stringliteral">&quot;Yes: 0&quot;</span>));</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  layout-&gt;addWidget(this-&gt;numberOfYesLabel, 0, 0);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  this-&gt;numberOfNoLabel = <span class="keyword">new</span> QLabel(tr(<span class="stringliteral">&quot;No: 0&quot;</span>));</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  layout-&gt;addWidget(this-&gt;numberOfNoLabel, 0, 1);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  QFont f;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  f = this-&gt;numberOfYesLabel-&gt;font();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  f.setPointSize (24);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  f.setBold (<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  this-&gt;numberOfYesLabel-&gt;setFont (f);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  f = this-&gt;numberOfNoLabel-&gt;font();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  f.setPointSize (24);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  f.setBold (<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  this-&gt;numberOfNoLabel-&gt;setFont (f);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  this-&gt;counterBox-&gt;setLayout(layout);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">void</span> MainWindow::createSummaryBox()</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  this-&gt;summaryBox = <span class="keyword">new</span> QGroupBox(tr(<span class="stringliteral">&quot;Summary&quot;</span>));</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  QGridLayout *layout = <span class="keyword">new</span> QGridLayout;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  this-&gt;eTimeLabel = <span class="keyword">new</span> QLabel(tr(<span class="stringliteral">&quot;Elapsed Time: 0.00 min&quot;</span>));</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  layout-&gt;addWidget(this-&gt;eTimeLabel, 0, 0, Qt::AlignTop);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  this-&gt;ratioLabel = <span class="keyword">new</span> QLabel(tr(<span class="stringliteral">&quot;Ratio of &#39;yes&#39; over &#39;no&#39;: 0.00&quot;</span>));</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  layout-&gt;addWidget(this-&gt;ratioLabel, 0, 1, Qt::AlignTop);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  this-&gt;yRateLabel = <span class="keyword">new</span> QLabel(tr(<span class="stringliteral">&quot;Rate of &#39;yes&#39;: 0.00 / min&quot;</span>));</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  layout-&gt;addWidget(this-&gt;yRateLabel, 1, 0, Qt::AlignTop);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  this-&gt;nRateLabel = <span class="keyword">new</span> QLabel(tr(<span class="stringliteral">&quot;Rate of &#39;no&#39;: 0.00 / min&quot;</span>));</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  layout-&gt;addWidget(this-&gt;nRateLabel, 1, 1, Qt::AlignTop);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  this-&gt;customPlot = <span class="keyword">new</span> <a class="code" href="classQCustomPlot.html">QCustomPlot</a>();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a8edd243d7a8afd1834fb950156013f6c">legend</a>-&gt;<a class="code" href="classQCPLayerable.html#af39f57bd76646607e618060aa185432e">setVisible</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a8edd243d7a8afd1834fb950156013f6c">legend</a>-&gt;<a class="code" href="classQCPLegend.html#a2592348886ffea646c6534bf88f7c49d">setFont</a>(QFont(<span class="stringliteral">&quot;Helvetica&quot;</span>,9));</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a5266220d51fa4dd225900c44a8895e46">addGraph</a>();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a6e4fc3683171091d3d5403b306e6a219">graph</a>(0)-&gt;<a class="code" href="classQCPAbstractPlottable.html#ab01f7d9d65c3e6a6b7889a51ad2bb487">setName</a>(<span class="stringliteral">&quot;Current Binomial Distribution&quot;</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a6e4fc3683171091d3d5403b306e6a219">graph</a>(0)-&gt;<a class="code" href="classQCPAbstractPlottable.html#a499165f4744b6d22da7b24295910fb2c">setPen</a>(QPen(Qt::blue)); </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a6e4fc3683171091d3d5403b306e6a219">graph</a>(0)-&gt;<a class="code" href="classQCPAbstractPlottable.html#ac514276c3c1dcb20abd29bc56c86f781">setBrush</a>(QBrush(QColor(0, 0, 255, 20))); </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a5266220d51fa4dd225900c44a8895e46">addGraph</a>();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a6e4fc3683171091d3d5403b306e6a219">graph</a>(1)-&gt;<a class="code" href="classQCPAbstractPlottable.html#ab01f7d9d65c3e6a6b7889a51ad2bb487">setName</a>(<span class="stringliteral">&quot;Number of Yes&quot;</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a6e4fc3683171091d3d5403b306e6a219">graph</a>(1)-&gt;<a class="code" href="classQCPAbstractPlottable.html#a499165f4744b6d22da7b24295910fb2c">setPen</a>(QPen(Qt::red)); </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a058f6d3a4c86bf94c476e5c380711dba">xAxis2</a>-&gt;<a class="code" href="classQCPLayerable.html#af39f57bd76646607e618060aa185432e">setVisible</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a058f6d3a4c86bf94c476e5c380711dba">xAxis2</a>-&gt;<a class="code" href="classQCPAxis.html#a022b1420c7785e75dd4de2ee3ee32d7c">setTickLabels</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a4fd6679232da7da0a1ae4e1b6ae83d6e">yAxis2</a>-&gt;<a class="code" href="classQCPLayerable.html#af39f57bd76646607e618060aa185432e">setVisible</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a4fd6679232da7da0a1ae4e1b6ae83d6e">yAxis2</a>-&gt;<a class="code" href="classQCPAxis.html#a022b1420c7785e75dd4de2ee3ee32d7c">setTickLabels</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  connect(this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#adfc43a4205a16f95e685741bf78592c2">xAxis</a>, SIGNAL(rangeChanged(<a class="code" href="classQCPRange.html">QCPRange</a>)), this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a058f6d3a4c86bf94c476e5c380711dba">xAxis2</a>, SLOT(setRange(<a class="code" href="classQCPRange.html">QCPRange</a>)));</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  connect(this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#af168096ce67002b1fbce18ae5dd1b652">yAxis</a>, SIGNAL(rangeChanged(<a class="code" href="classQCPRange.html">QCPRange</a>)), this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a4fd6679232da7da0a1ae4e1b6ae83d6e">yAxis2</a>, SLOT(setRange(<a class="code" href="classQCPRange.html">QCPRange</a>)));</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#afb8d65564144ec14cb2ab1874aa12202">setInteractions</a>(<a class="code" href="namespaceQCP.html#ab5c4c67a25e8268d4dd3adda59cd4720ab79d481c81d42acc3e09ca36cf82ae22">QCP::iRangeDrag</a> | <a class="code" href="namespaceQCP.html#ab5c4c67a25e8268d4dd3adda59cd4720acd4c43af1fcd2d13e2d80cb34b8a4e31">QCP::iRangeZoom</a> | <a class="code" href="namespaceQCP.html#ab5c4c67a25e8268d4dd3adda59cd4720a098815ee744671d4f763d99255e5fa81">QCP::iSelectPlottables</a>);  </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  layout-&gt;addWidget(this-&gt;customPlot, 2, 0, 1, 2);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  layout-&gt;setRowStretch (0, 0);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  layout-&gt;setRowStretch (1, 0);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  layout-&gt;setRowStretch (2, 1);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  this-&gt;summaryBox-&gt;setLayout(layout);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classMainWindow.html#a9e53392568d47bcb31ccbde9917efb0c">  126</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#a9e53392568d47bcb31ccbde9917efb0c">MainWindow::keyPressEvent</a>(QKeyEvent* e)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;{</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordflow">switch</span>(e-&gt;key())</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <span class="keywordflow">case</span> Qt::Key_Y:</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        this-&gt;ListOfOperations.push_back (<a class="code" href="classMainWindow.html#aa94abccfd42d9d292105a083a98d5f5ca5300d9661fdc5fcb6c32eccef1b4d7b4">MainWindow::Operation_Yes</a>);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        this-&gt;<a class="code" href="classMainWindow.html#ac722b8078326f2da54310d0519181c0c">UpdateCounter</a>();</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">if</span> (this-&gt;RefreshMode == <a class="code" href="classMainWindow.html#a020b21b37cd4f734180a8bf5d5a59cf2aec0a5a43ca2f2ead247e6e2ae6fbaf77">MainWindow::Refresh_Continuous</a>)</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;          this-&gt;<a class="code" href="classMainWindow.html#ade406a5faceb5564dafb9f4d1462e75f">UpdateSummary</a>();</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      <span class="keywordflow">case</span> Qt::Key_N:</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        this-&gt;ListOfOperations.push_back (<a class="code" href="classMainWindow.html#aa94abccfd42d9d292105a083a98d5f5caf77595598b8469909228270207f4d9a5">MainWindow::Operation_No</a>);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        this-&gt;<a class="code" href="classMainWindow.html#ac722b8078326f2da54310d0519181c0c">UpdateCounter</a>();</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">if</span> (this-&gt;RefreshMode == <a class="code" href="classMainWindow.html#a020b21b37cd4f734180a8bf5d5a59cf2aec0a5a43ca2f2ead247e6e2ae6fbaf77">MainWindow::Refresh_Continuous</a>)</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;          this-&gt;<a class="code" href="classMainWindow.html#ade406a5faceb5564dafb9f4d1462e75f">UpdateSummary</a>();</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      <span class="keywordflow">case</span> Qt::Key_Z:</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">if</span> (this-&gt;ListOfOperations.size() &gt;= 1)</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;          this-&gt;ListOfOperations.pop_back();</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        this-&gt;<a class="code" href="classMainWindow.html#ac722b8078326f2da54310d0519181c0c">UpdateCounter</a>();</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordflow">if</span> (this-&gt;RefreshMode == <a class="code" href="classMainWindow.html#a020b21b37cd4f734180a8bf5d5a59cf2aec0a5a43ca2f2ead247e6e2ae6fbaf77">MainWindow::Refresh_Continuous</a>)</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;          this-&gt;<a class="code" href="classMainWindow.html#ade406a5faceb5564dafb9f4d1462e75f">UpdateSummary</a>();</div>
@@ -245,80 +245,81 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      <span class="keywordflow">case</span> Qt::Key_Q:</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        this-&gt;<a class="code" href="classMainWindow.html#ac722b8078326f2da54310d0519181c0c">UpdateCounter</a>();</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        this-&gt;<a class="code" href="classMainWindow.html#ade406a5faceb5564dafb9f4d1462e75f">UpdateSummary</a>();</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="comment">//\todo emit a slot to quit the program (close window)</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      <span class="keywordflow">case</span> Qt::Key_R:</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        this-&gt;RefreshMode = ! this-&gt;RefreshMode;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  }</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="classMainWindow.html#ac722b8078326f2da54310d0519181c0c">  166</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#ac722b8078326f2da54310d0519181c0c">MainWindow::UpdateCounter</a>()</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;{</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordflow">if</span> (this-&gt;counterBox == NULL)</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y = std::count (this-&gt;ListOfOperations.begin(), this-&gt;ListOfOperations.end(), <a class="code" href="classMainWindow.html#aa94abccfd42d9d292105a083a98d5f5ca5300d9661fdc5fcb6c32eccef1b4d7b4">MainWindow::Operation_Yes</a>);</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n = std::count (this-&gt;ListOfOperations.begin(), this-&gt;ListOfOperations.end(), <a class="code" href="classMainWindow.html#aa94abccfd42d9d292105a083a98d5f5caf77595598b8469909228270207f4d9a5">MainWindow::Operation_No</a>);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  this-&gt;numberOfYesLabel-&gt;setText(tr(<span class="stringliteral">&quot;Yes: %1&quot;</span>).arg(y));</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  this-&gt;numberOfNoLabel-&gt;setText(tr(<span class="stringliteral">&quot;No: %1&quot;</span>).arg(n));</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;}</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="comment">//\todo emit a signal to quit the program (close window)</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        emit done(0);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      <span class="keywordflow">case</span> Qt::Key_R:</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        this-&gt;RefreshMode = ! this-&gt;RefreshMode;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="classMainWindow.html#ac722b8078326f2da54310d0519181c0c">  167</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#ac722b8078326f2da54310d0519181c0c">MainWindow::UpdateCounter</a>()</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;{</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <span class="keywordflow">if</span> (this-&gt;counterBox == NULL)</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y = std::count (this-&gt;ListOfOperations.begin(), this-&gt;ListOfOperations.end(), <a class="code" href="classMainWindow.html#aa94abccfd42d9d292105a083a98d5f5ca5300d9661fdc5fcb6c32eccef1b4d7b4">MainWindow::Operation_Yes</a>);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n = std::count (this-&gt;ListOfOperations.begin(), this-&gt;ListOfOperations.end(), <a class="code" href="classMainWindow.html#aa94abccfd42d9d292105a083a98d5f5caf77595598b8469909228270207f4d9a5">MainWindow::Operation_No</a>);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  this-&gt;numberOfYesLabel-&gt;setText(tr(<span class="stringliteral">&quot;Yes: %1&quot;</span>).arg(y));</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  this-&gt;numberOfNoLabel-&gt;setText(tr(<span class="stringliteral">&quot;No: %1&quot;</span>).arg(n));</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="classMainWindow.html#ade406a5faceb5564dafb9f4d1462e75f">  177</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#ade406a5faceb5564dafb9f4d1462e75f">MainWindow::UpdateSummary</a>()</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;{</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keywordflow">if</span> (this-&gt;summaryBox == NULL)</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y = std::count (this-&gt;ListOfOperations.begin(), this-&gt;ListOfOperations.end(), <a class="code" href="classMainWindow.html#aa94abccfd42d9d292105a083a98d5f5ca5300d9661fdc5fcb6c32eccef1b4d7b4">MainWindow::Operation_Yes</a>);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n = std::count (this-&gt;ListOfOperations.begin(), this-&gt;ListOfOperations.end(), <a class="code" href="classMainWindow.html#aa94abccfd42d9d292105a083a98d5f5caf77595598b8469909228270207f4d9a5">MainWindow::Operation_No</a>);</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="keywordtype">float</span> ratio = this-&gt;ListOfOperations.size() ? (float)(y)/(float)(this-&gt;ListOfOperations.size()) : 0;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <span class="keywordtype">float</span> elapsed_minutes = (float) this-&gt;timer-&gt;elapsed() / (1000.0 * 60.0);</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <span class="keywordtype">float</span> yrate = (float)(y) / elapsed_minutes;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keywordtype">float</span> nrate = (float)(n) / elapsed_minutes;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  this-&gt;eTimeLabel-&gt;setText(tr(<span class="stringliteral">&quot;Elapsed Time: %1 min&quot;</span>).arg(QString::number (elapsed_minutes, <span class="charliteral">&#39;f&#39;</span>, 2 )));</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  this-&gt;ratioLabel-&gt;setText(tr(<span class="stringliteral">&quot;Ratio of &#39;yes&#39; over &#39;no&#39;: %1&quot;</span>).arg(QString::number (ratio, <span class="charliteral">&#39;f&#39;</span>, 2 )));</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  this-&gt;yRateLabel-&gt;setText(tr(<span class="stringliteral">&quot;Rate of &#39;yes&#39;: %1 / min&quot;</span>).arg(QString::number (yrate, <span class="charliteral">&#39;f&#39;</span>, 2 )));</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  this-&gt;nRateLabel-&gt;setText(tr(<span class="stringliteral">&quot;Rate of &#39;no&#39;: %1 / min&quot;</span>).arg(QString::number (nrate, <span class="charliteral">&#39;f&#39;</span>, 2 )));</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keywordflow">if</span> (this-&gt;Calculator == NULL ||</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      !this-&gt;ListOfOperations.size())</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  this-&gt;Calculator-&gt;<a class="code" href="classBinomialCalculator.html#aef78c7b06fbc9fa7e1e9205e8c5fb906">SetNumberOfExperiments</a> (this-&gt;ListOfOperations.size());</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  this-&gt;Calculator-&gt;<a class="code" href="classBinomialCalculator.html#af994cca27affae6d89b07c1aa901fefb">SetProbabilityOfSuccess</a> (0.5);</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  std::vector&lt;float&gt; pmf;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <span class="keywordtype">float</span> max_p = 0.0;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  </div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;this-&gt;ListOfOperations.size(); i++)</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">float</span> p = this-&gt;Calculator-&gt;<a class="code" href="classBinomialCalculator.html#a73dd7a85825ccaa950f25ec24915fa39">GetProbabilityMassFunction</a> (i);</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    pmf.push_back (p);</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    max_p = std::max (p, max_p);</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  }</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  </div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  QVector&lt;double&gt; x0(this-&gt;ListOfOperations.size()), y0(this-&gt;ListOfOperations.size());</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;this-&gt;ListOfOperations.size(); ++i)</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  {</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    x0[i] = i;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    y0[i] = pmf[i];</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  }</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  QVector&lt;double&gt; x1 (2), y1 (2);</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  x1[0] = y;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  x1[1] = y;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  y1[0] = 0;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  y1[1] = max_p;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  </div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a6e4fc3683171091d3d5403b306e6a219">graph</a>(0)-&gt;<a class="code" href="classQCPGraph.html#a970e8364f30fb2fb0a38a85faf8c85c1">setData</a>(x0, y0);</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a6e4fc3683171091d3d5403b306e6a219">graph</a>(1)-&gt;<a class="code" href="classQCPGraph.html#a970e8364f30fb2fb0a38a85faf8c85c1">setData</a>(x1, y1);</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a6e4fc3683171091d3d5403b306e6a219">graph</a>(0)-&gt;<a class="code" href="classQCPGraph.html#a422817ea3deb411b404a9e2352b1ba6f">rescaleAxes</a>();</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a6e4fc3683171091d3d5403b306e6a219">graph</a>(1)-&gt;<a class="code" href="classQCPGraph.html#a422817ea3deb411b404a9e2352b1ba6f">rescaleAxes</a>();</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a42a60f87368edd62cfa8793fcb2927e8">replot</a>();</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;}</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="classMainWindow.html#ade406a5faceb5564dafb9f4d1462e75f">  178</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#ade406a5faceb5564dafb9f4d1462e75f">MainWindow::UpdateSummary</a>()</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;{</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keywordflow">if</span> (this-&gt;summaryBox == NULL)</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;      </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y = std::count (this-&gt;ListOfOperations.begin(), this-&gt;ListOfOperations.end(), <a class="code" href="classMainWindow.html#aa94abccfd42d9d292105a083a98d5f5ca5300d9661fdc5fcb6c32eccef1b4d7b4">MainWindow::Operation_Yes</a>);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n = std::count (this-&gt;ListOfOperations.begin(), this-&gt;ListOfOperations.end(), <a class="code" href="classMainWindow.html#aa94abccfd42d9d292105a083a98d5f5caf77595598b8469909228270207f4d9a5">MainWindow::Operation_No</a>);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <span class="keywordtype">float</span> ratio = this-&gt;ListOfOperations.size() ? (float)(y)/(float)(this-&gt;ListOfOperations.size()) : 0;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <span class="keywordtype">float</span> elapsed_minutes = (float) this-&gt;timer-&gt;elapsed() / (1000.0 * 60.0);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keywordtype">float</span> yrate = (float)(y) / elapsed_minutes;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="keywordtype">float</span> nrate = (float)(n) / elapsed_minutes;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  this-&gt;eTimeLabel-&gt;setText(tr(<span class="stringliteral">&quot;Elapsed Time: %1 min&quot;</span>).arg(QString::number (elapsed_minutes, <span class="charliteral">&#39;f&#39;</span>, 2 )));</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  this-&gt;ratioLabel-&gt;setText(tr(<span class="stringliteral">&quot;Ratio of &#39;yes&#39; over &#39;no&#39;: %1&quot;</span>).arg(QString::number (ratio, <span class="charliteral">&#39;f&#39;</span>, 2 )));</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  this-&gt;yRateLabel-&gt;setText(tr(<span class="stringliteral">&quot;Rate of &#39;yes&#39;: %1 / min&quot;</span>).arg(QString::number (yrate, <span class="charliteral">&#39;f&#39;</span>, 2 )));</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  this-&gt;nRateLabel-&gt;setText(tr(<span class="stringliteral">&quot;Rate of &#39;no&#39;: %1 / min&quot;</span>).arg(QString::number (nrate, <span class="charliteral">&#39;f&#39;</span>, 2 )));</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keywordflow">if</span> (this-&gt;Calculator == NULL ||</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      !this-&gt;ListOfOperations.size())</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  this-&gt;Calculator-&gt;<a class="code" href="classBinomialCalculator.html#aef78c7b06fbc9fa7e1e9205e8c5fb906">SetNumberOfExperiments</a> (this-&gt;ListOfOperations.size());</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  this-&gt;Calculator-&gt;<a class="code" href="classBinomialCalculator.html#af994cca27affae6d89b07c1aa901fefb">SetProbabilityOfSuccess</a> (0.5);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  std::vector&lt;float&gt; pmf;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <span class="keywordtype">float</span> max_p = 0.0;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;this-&gt;ListOfOperations.size(); i++)</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordtype">float</span> p = this-&gt;Calculator-&gt;<a class="code" href="classBinomialCalculator.html#a73dd7a85825ccaa950f25ec24915fa39">GetProbabilityMassFunction</a> (i);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    pmf.push_back (p);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    max_p = std::max (p, max_p);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  QVector&lt;double&gt; x0(this-&gt;ListOfOperations.size()), y0(this-&gt;ListOfOperations.size());</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;this-&gt;ListOfOperations.size(); ++i)</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    x0[i] = i;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    y0[i] = pmf[i];</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  QVector&lt;double&gt; x1 (2), y1 (2);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  x1[0] = y;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  x1[1] = y;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  y1[0] = 0;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  y1[1] = max_p;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a6e4fc3683171091d3d5403b306e6a219">graph</a>(0)-&gt;<a class="code" href="classQCPGraph.html#a970e8364f30fb2fb0a38a85faf8c85c1">setData</a>(x0, y0);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a6e4fc3683171091d3d5403b306e6a219">graph</a>(1)-&gt;<a class="code" href="classQCPGraph.html#a970e8364f30fb2fb0a38a85faf8c85c1">setData</a>(x1, y1);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a6e4fc3683171091d3d5403b306e6a219">graph</a>(0)-&gt;<a class="code" href="classQCPGraph.html#a422817ea3deb411b404a9e2352b1ba6f">rescaleAxes</a>();</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a6e4fc3683171091d3d5403b306e6a219">graph</a>(1)-&gt;<a class="code" href="classQCPGraph.html#a422817ea3deb411b404a9e2352b1ba6f">rescaleAxes</a>();</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  this-&gt;customPlot-&gt;<a class="code" href="classQCustomPlot.html#a42a60f87368edd62cfa8793fcb2927e8">replot</a>();</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;}</div>
 <div class="ttc" id="classQCustomPlot_html_a058f6d3a4c86bf94c476e5c380711dba"><div class="ttname"><a href="classQCustomPlot.html#a058f6d3a4c86bf94c476e5c380711dba">QCustomPlot::xAxis2</a></div><div class="ttdeci">QCPAxis * xAxis2</div><div class="ttdef"><b>Definition:</b> <a href="qcustomplot_8h_source.html#l01819">qcustomplot.h:1819</a></div></div>
 <div class="ttc" id="classQCustomPlot_html_a8edd243d7a8afd1834fb950156013f6c"><div class="ttname"><a href="classQCustomPlot.html#a8edd243d7a8afd1834fb950156013f6c">QCustomPlot::legend</a></div><div class="ttdeci">QCPLegend * legend</div><div class="ttdef"><b>Definition:</b> <a href="qcustomplot_8h_source.html#l01820">qcustomplot.h:1820</a></div></div>
 <div class="ttc" id="classQCPRange_html"><div class="ttname"><a href="classQCPRange.html">QCPRange</a></div><div class="ttdoc">Represents the range an axis is encompassing. </div><div class="ttdef"><b>Definition:</b> <a href="qcustomplot_8h_source.html#l00476">qcustomplot.h:476</a></div></div>
@@ -341,11 +342,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classQCPLayerable_html_af39f57bd76646607e618060aa185432e"><div class="ttname"><a href="classQCPLayerable.html#af39f57bd76646607e618060aa185432e">QCPLayerable::setVisible</a></div><div class="ttdeci">void setVisible(bool on)</div><div class="ttdef"><b>Definition:</b> <a href="qcustomplot_8cpp_source.html#l00953">qcustomplot.cpp:953</a></div></div>
 <div class="ttc" id="BinomialCalculator_8h_html"><div class="ttname"><a href="BinomialCalculator_8h.html">BinomialCalculator.h</a></div></div>
 <div class="ttc" id="classQCustomPlot_html_a5266220d51fa4dd225900c44a8895e46"><div class="ttname"><a href="classQCustomPlot.html#a5266220d51fa4dd225900c44a8895e46">QCustomPlot::addGraph</a></div><div class="ttdeci">QCPGraph * addGraph(QCPAxis *keyAxis=0, QCPAxis *valueAxis=0)</div><div class="ttdef"><b>Definition:</b> <a href="qcustomplot_8cpp_source.html#l09697">qcustomplot.cpp:9697</a></div></div>
-<div class="ttc" id="classMainWindow_html_ade406a5faceb5564dafb9f4d1462e75f"><div class="ttname"><a href="classMainWindow.html#ade406a5faceb5564dafb9f4d1462e75f">MainWindow::UpdateSummary</a></div><div class="ttdeci">void UpdateSummary(void)</div><div class="ttdef"><b>Definition:</b> <a href="MainWindow_8cpp_source.html#l00177">MainWindow.cpp:177</a></div></div>
+<div class="ttc" id="classMainWindow_html_ade406a5faceb5564dafb9f4d1462e75f"><div class="ttname"><a href="classMainWindow.html#ade406a5faceb5564dafb9f4d1462e75f">MainWindow::UpdateSummary</a></div><div class="ttdeci">void UpdateSummary(void)</div><div class="ttdef"><b>Definition:</b> <a href="MainWindow_8cpp_source.html#l00178">MainWindow.cpp:178</a></div></div>
 <div class="ttc" id="classQCPAbstractPlottable_html_ab01f7d9d65c3e6a6b7889a51ad2bb487"><div class="ttname"><a href="classQCPAbstractPlottable.html#ab01f7d9d65c3e6a6b7889a51ad2bb487">QCPAbstractPlottable::setName</a></div><div class="ttdeci">void setName(const QString &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="qcustomplot_8cpp_source.html#l06865">qcustomplot.cpp:6865</a></div></div>
 <div class="ttc" id="classQCustomPlot_html_adfc43a4205a16f95e685741bf78592c2"><div class="ttname"><a href="classQCustomPlot.html#adfc43a4205a16f95e685741bf78592c2">QCustomPlot::xAxis</a></div><div class="ttdeci">QCPAxis * xAxis</div><div class="ttdef"><b>Definition:</b> <a href="qcustomplot_8h_source.html#l01819">qcustomplot.h:1819</a></div></div>
-<div class="ttc" id="classMainWindow_html_ac722b8078326f2da54310d0519181c0c"><div class="ttname"><a href="classMainWindow.html#ac722b8078326f2da54310d0519181c0c">MainWindow::UpdateCounter</a></div><div class="ttdeci">void UpdateCounter(void)</div><div class="ttdef"><b>Definition:</b> <a href="MainWindow_8cpp_source.html#l00166">MainWindow.cpp:166</a></div></div>
-<div class="ttc" id="classMainWindow_html_a9e53392568d47bcb31ccbde9917efb0c"><div class="ttname"><a href="classMainWindow.html#a9e53392568d47bcb31ccbde9917efb0c">MainWindow::keyPressEvent</a></div><div class="ttdeci">void keyPressEvent(QKeyEvent *e)</div><div class="ttdef"><b>Definition:</b> <a href="MainWindow_8cpp_source.html#l00127">MainWindow.cpp:127</a></div></div>
+<div class="ttc" id="classMainWindow_html_ac722b8078326f2da54310d0519181c0c"><div class="ttname"><a href="classMainWindow.html#ac722b8078326f2da54310d0519181c0c">MainWindow::UpdateCounter</a></div><div class="ttdeci">void UpdateCounter(void)</div><div class="ttdef"><b>Definition:</b> <a href="MainWindow_8cpp_source.html#l00167">MainWindow.cpp:167</a></div></div>
+<div class="ttc" id="classMainWindow_html_a9e53392568d47bcb31ccbde9917efb0c"><div class="ttname"><a href="classMainWindow.html#a9e53392568d47bcb31ccbde9917efb0c">MainWindow::keyPressEvent</a></div><div class="ttdeci">void keyPressEvent(QKeyEvent *e)</div><div class="ttdef"><b>Definition:</b> <a href="MainWindow_8cpp_source.html#l00126">MainWindow.cpp:126</a></div></div>
 <div class="ttc" id="classQCPAxis_html_a022b1420c7785e75dd4de2ee3ee32d7c"><div class="ttname"><a href="classQCPAxis.html#a022b1420c7785e75dd4de2ee3ee32d7c">QCPAxis::setTickLabels</a></div><div class="ttdeci">void setTickLabels(bool show)</div><div class="ttdef"><b>Definition:</b> <a href="qcustomplot_8cpp_source.html#l04512">qcustomplot.cpp:4512</a></div></div>
 <div class="ttc" id="qcustomplot_8h_html"><div class="ttname"><a href="qcustomplot_8h.html">qcustomplot.h</a></div></div>
 <div class="ttc" id="namespaceQCP_html_ab5c4c67a25e8268d4dd3adda59cd4720acd4c43af1fcd2d13e2d80cb34b8a4e31"><div class="ttname"><a href="namespaceQCP.html#ab5c4c67a25e8268d4dd3adda59cd4720acd4c43af1fcd2d13e2d80cb34b8a4e31">QCP::iRangeZoom</a></div><div class="ttdoc">0x002 Axis ranges are zoomable with the mouse wheel (see QCPAxisRect::setRangeZoom, QCPAxisRect::setRangeZoomAxes) </div><div class="ttdef"><b>Definition:</b> <a href="qcustomplot_8h_source.html#l00156">qcustomplot.h:156</a></div></div>
@@ -357,7 +358,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 2 2016 14:30:28 for SETestKCL by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 2 2016 16:09:17 for SETestKCL by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
