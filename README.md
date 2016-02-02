@@ -42,7 +42,19 @@ For Windows:
 
     cmd ./bin/negotiation.exe
 
-### ScreenShot
+
+### Code
+
+
+see documentation in this [link](http://ntoussaint.github.io/SETestKCL/Doxygen/)
+
+The 2 main classes are MainWindow and BinomialCalculator:
+
+  - The class MainWindow implements the main interface.
+
+  - The class BinomialCalculator embeds probability functionalities for a
+   binomial distribution.
+
 
 ### Run Time Usage
 
