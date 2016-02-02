@@ -33,7 +33,6 @@ class BinomialCalculator;
    \author Nicolas Toussaint
 */
 
-
 class MainWindow: public QDialog
 {
   Q_OBJECT
@@ -49,6 +48,14 @@ class MainWindow: public QDialog
   {
     Operation_No = 0,
     Operation_Yes = 1
+  };
+  /**
+     List of refresh modes
+  */
+  enum RefreshModeIds
+  {
+    Refresh_Continuous = 0,
+    Refresh_NonContinuous = 1
   };
   /**
      Set the Binomial calculator object, used to estimate the
@@ -67,6 +74,29 @@ class MainWindow: public QDialog
   {
     return this->Calculator;
   }
+  /**
+     Get the refresh mode of the window.
+     if set to MainWindow::Refresh_Continuous, the summary will be refresh at every
+     stroke of 'y', 'n', and 'z', additionally to 's' and 'q'
+     if set to MainWindow::Refresh_NonContinuous, the summary will be refresh only
+     at the stroke of 's' or 'q'
+  */
+  unsigned int GetRefreshMode (void) const
+  {
+    return this->RefreshMode;
+  }
+  /**
+     Set the refresh mode of the window.
+     if set to MainWindow::Refresh_Continuous, the summary will be refresh at every
+     stroke of 'y', 'n' and 'z', additionally to 's' and 'q'
+     if set to MainWindow::Refresh_NonContinuous, the summary will be refresh only
+     at the stroke of 's' or 'q'
+  */
+  void SetRefreshMode (unsigned int m)
+  {
+    this->RefreshMode = m;
+  }
+  
   
  protected:
   
@@ -109,6 +139,28 @@ class MainWindow: public QDialog
   */
   void createSummaryBox();
   
+  /**
+     Timer to calculate the elapsed time of the negotiation
+  */
+  QElapsedTimer* timer;
+  /**
+     Binomial calculator object reference
+  */
+  BinomialCalculator* Calculator;
+  /**
+     Container of the list of successive operations (yes and no)
+     Manipulated in MainWindow::UpdateCounter()
+  */
+  std::vector<unsigned int> ListOfOperations;
+  /**
+     String containing the usage text
+  */
+  std::string Usage;
+  /**
+     Parameter containing the RefreshMode for the Summary
+  */
+  unsigned int RefreshMode;
+  
   QGroupBox *usageBox;
   QGroupBox *counterBox;
   QGroupBox *summaryBox;
@@ -120,22 +172,6 @@ class MainWindow: public QDialog
   QLabel* yRateLabel;
   QLabel* nRateLabel;
   QCustomPlot* customPlot;
-
-  /**
-     Timer to calculate the elapsed time of the negotiation
-  */
-  QElapsedTimer* timer;
-  
-  
-  /**
-     Binomial calculator object reference
-  */
-  BinomialCalculator* Calculator;
-  /**
-     Container of the list of successive operations (yes and no)
-     Manipulated in MainWindow::UpdateCounter()
-  */
-  std::vector<unsigned int> ListOfOperations;
   
 };
 
