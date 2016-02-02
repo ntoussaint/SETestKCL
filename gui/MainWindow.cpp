@@ -27,7 +27,15 @@
 
 MainWindow::MainWindow()
 {
-  this->Calculator = NULL;
+  this->Usage =
+    "Please press one of the following key: \n \
+    - 'y': When you hear 'yes' \n \
+    - 'n': When you hear 'no' \n \
+    - 'z': To undo the last operation \n \
+    - 'r': Toggle the refresh mode for the summary (continuous / non-continuous) \n \
+    - 's': To show (refresh) the summary of the negotiation \n \
+    - 'q': To quit the program \n";
+  
   this->createUsageBox();
   this->createCounterBox();
   this->createSummaryBox();
@@ -42,22 +50,18 @@ MainWindow::MainWindow()
   this->setLayout(mainLayout);
   this->setWindowTitle(tr("Negotiation Study"));
   
+  this->Calculator = NULL;
+  this->RefreshMode = MainWindow::Refresh_Continuous;
   this->timer = new QElapsedTimer();
   this->timer->start();  
 }
 
 void MainWindow::createUsageBox()
 {
-  std::string usage =
-    "Please press one of the following key: \n \
-    - 'y': When you hear 'yes' \n \
-    - 'n': When you hear 'no' \n \
-    - 's': To show a summary of the negotiation \n \
-    - 'q': To show a summary and quit the program \n";
   
   this->usageBox = new QGroupBox(tr("Usage"));
   QHBoxLayout *layout = new QHBoxLayout;
-  QLabel* usageLabel = new QLabel (tr (usage.c_str()));
+  QLabel* usageLabel = new QLabel (tr (this->Usage.c_str()));
   layout->addWidget (usageLabel);
   this->usageBox->setLayout(layout);
   std::cout<<"constructor"<<std::endl;
@@ -122,28 +126,25 @@ void MainWindow::createSummaryBox()
 
 void MainWindow::keyPressEvent(QKeyEvent* e)
 {
-  if (this->Calculator == NULL)
-  {
-    std::cerr << "ERROR: No calculator associated." << std::endl;
-    return;
-  }
-  
   switch(e->key())
   {
       case Qt::Key_Y:
 	this->ListOfOperations.push_back (MainWindow::Operation_Yes);
 	this->UpdateCounter();
-	// this->UpdateSummary();
+	if (this->RefreshMode == MainWindow::Refresh_Continuous)
+	  this->UpdateSummary();
 	break;
       case Qt::Key_N:
 	this->ListOfOperations.push_back (MainWindow::Operation_No);
 	this->UpdateCounter();
-	// this->UpdateSummary();
+	if (this->RefreshMode == MainWindow::Refresh_Continuous)
+	  this->UpdateSummary();
 	break;
       case Qt::Key_Z:
 	this->ListOfOperations.pop_back();
 	this->UpdateCounter();
-	// this->UpdateSummary();
+	if (this->RefreshMode == MainWindow::Refresh_Continuous)
+	  this->UpdateSummary();
 	break;
       case Qt::Key_S:
 	this->UpdateCounter();
@@ -152,6 +153,10 @@ void MainWindow::keyPressEvent(QKeyEvent* e)
       case Qt::Key_Q:
 	this->UpdateCounter();
 	this->UpdateSummary();
+	//\todo emit a slot to quit the program (close window)
+	break;
+      case Qt::Key_R:
+	this->RefreshMode = ! this->RefreshMode;
 	break;
       default:
 	break;
