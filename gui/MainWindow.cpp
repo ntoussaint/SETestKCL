@@ -22,7 +22,7 @@
 #include <QKeyEvent>
 #include <QElapsedTimer>
 
-#include "QCustomPlot.h"
+#include "qcustomplot.h"
 #include "BinomialCalculator.h"
 
 MainWindow::MainWindow()
