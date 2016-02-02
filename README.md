@@ -5,7 +5,7 @@
 
 <br>
 
-It is based on Qt for the gui part, and Boost for the binomial distribution calculation
+It is based on Qt for the gui part, and Boost for the binomial distribution calculation. Note that the GPL [QtCustomPlot](http://www.qcustomplot.com/) has been shipped in this repository to help producing graphs.
 
 See the full Doxygen documentation in this [link](http://ntoussaint.github.io/SETestKCL/Doxygen/).
 
